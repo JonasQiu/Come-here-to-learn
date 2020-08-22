@@ -1,0 +1,51 @@
+<usually wx:if="{{isShowUsu}}" typeIndex='{{usuallyData.typeIndex}}' list="{{usuallyData.list}}" titleName="{{usuallyData.titleName}}" bind:callshowChange="changePage" />
+<!-- 登录模块 -->
+<scroll-view scroll-y wx:else class="scrollPage">
+	<button class="UCenter-bg padding-40" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">
+		<image src="{{userInfo.avatarUrl?userInfo.avatarUrl:'/image/logo.png'}}" class="{{userInfo.avatarUrl?'png':''}}" mode="widthFix"></image>
+		<view class="text-xl">{{userInfo.nickName?userInfo.nickName:'游客'}}
+		</view>
+		<view class="m-10">
+			<text>{{userInfo._id?'已登录':'未登录'}}</text>
+		</view>
+		<image src="{{My.gif}}" mode="scaleToFill" class="gif-wave"></image>
+	</button>
+	<!-- 粉丝关注收藏 -->
+	<view class="padding flex text-center text-grey bg-white shadow-warp" style="box-shadow: 0 0 20rpx #ddd;">
+		<view class="flex flex-sub flex-direction solid-right">
+			<view class="text-xxl text-orange">{{fansCount}}</view>
+			<view class="margin-top-xs">
+				<text class="cuIcon-attentionfill"></text> 粉丝</view>
+		</view>
+		<view class="flex flex-sub flex-direction solid-right">
+			<view class="text-xxl text-blue">{{attentionCount}}</view>
+			<view class="margin-top-xs">
+				<text class="cuIcon-add"></text> 关注</view>
+		</view>
+		<view class="flex flex-sub flex-direction">
+			<view class="text-xxl text-green">{{collectionCount}}</view>
+			<view class="margin-top-xs">
+				<text class="cuIcon-favorfill"></text> 收藏</view>
+		</view>
+	</view>
+
+	<!-- 宫格列表 -->
+	<view class="contain_box radius" wx:key="index" style="margin: 30rpx;">
+		<view class="fun_box" wx:for="{{My.list}}" wx:key="index" bindtap="fun_box" data-myindex="{{index}}" data-myname="{{item.name}}">
+			<image class="fun_box_icon" src="{{item.icon}}" mode="widthFix"></image>
+			<text class="txt_1">{{item.name}}</text>
+		</view>
+	</view>
+
+
+	<!-- 设置部分 -->
+	<view class="cu-list menu card-menu shadow-lg radius orther">
+		<view class="cu-item arrow" wx:for="{{My.othericon}}" wx:key="index">
+			<view class="content" bindtap="CopyLink">
+				<image src="{{item.img}}" style="margin-right:30rpx"></image>
+				<text class="text-grey">{{item.name}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="cu-tabbar-height"></view>
+</scroll-view>

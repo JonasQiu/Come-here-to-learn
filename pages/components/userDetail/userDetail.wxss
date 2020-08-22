@@ -1,0 +1,123 @@
+@import "/colorui/icon.wxss";
+@import "/colorui/main.wxss";
+@import "/colorui/animation.wxss";
+
+.usua {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.box {
+  background-color: #fff;
+  position: fixed;
+  left: calc(50% - 335rpx);
+  top: calc(50% - 260rpx);
+  text-align: center;
+  z-index: 2;
+  width: 670rpx;
+  height: 520rpx;
+  border-radius: 30rpx;
+}
+
+.info {
+  height: 200rpx;
+  width: 100%;
+  display: flex;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.sex {
+  width: 235rpx;
+  height: 100%;
+  margin-top: 35rpx;
+  font-size: 50rpx !important;
+}
+
+.avatar {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.avatar-img {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: -100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 5rpx 5rpx 10rpx #ccc;
+}
+
+.name {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.user-type {
+  width: 235rpx;
+  height: 100%;
+  font-size: 24rpx;
+}
+
+.name-border {
+  margin: 30rpx 30rpx;
+  padding: 10rpx 20rpx;
+  border: 2rpx solid rgb(250, 171, 24);
+  color: rgb(250, 171, 24);
+  border-radius: 30rpx;
+  font-size: 27rpx;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-family: "Microsoft Yahei";
+}
+
+.num {
+  display: flex;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-family: "Microsoft Yahei";
+  margin: 20rpx;
+}
+
+.atten {
+  flex: 1;
+  align-items: center;
+  color: red;
+}
+
+.fan {
+  flex: 1;
+  align-items: center;
+  color: black;
+}
+
+.acti {
+  flex: 1;
+  align-items: center;
+  color: orange;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #000;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+.button {
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "Microsoft Yahei";
+  width: 90%;
+  margin: 0 0 20rpx;
+  opacity: 0.9;
+  height: 70rpx !important;
+}

@@ -1,0 +1,376 @@
+@import "/colorui/animation.wxss";
+
+/* 页面 */
+.page {
+  background-color: #e4f9f5;
+  padding-bottom: 90rpx;
+}
+
+/* 块 */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: -103rpx;
+  width: 100%;
+}
+
+.chunk {
+  border: 2rpx solid rgb(241, 241, 241);
+  margin: 20rpx auto 40rpx;
+  width: 92%;
+  background: #fff;
+  box-shadow: 15rpx 20rpx 20rpx #ccc;
+  border-radius: 30rpx;
+}
+
+/* 头部 */
+.eco-head {
+  padding: 30rpx;
+  display: flex;
+  border-radius: 90rpx;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 100rpx;
+  height: 100rpx;
+  box-shadow: 10rpx 10rpx 30rpx #ccc;
+}
+
+.eco-nameInfo {
+  width: 360rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 15rpx;
+  margin-top: 7rpx;
+}
+
+.eco-name {
+  font-size: 33rpx;
+  font-weight: bold;
+  margin: 0 0 0 10rpx;
+}
+
+.first-change-time {
+  font-size: 22rpx;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 20rpx 0 0 10rpx;
+}
+
+.head-attention {
+  margin-left: 50rpx;
+  padding: 0 17rpx;
+  color: #000;
+  border: 2rpx solid #aaa;
+  border-radius: 50%;
+  font-size: 60rpx;
+  /* background-color: rgb(231, 18, 196); */
+}
+
+/* 描述 */
+.chInfo {
+  margin-top: -10rpx;
+  border-radius: 25rpx;
+  padding: 10rpx;
+}
+
+.eco-info {
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  margin-right: 40rpx;
+  overflow: hidden;
+  text-align: justify;
+}
+
+.eco-title {
+  text-align: center;
+  margin: 20rpx 0 30rpx 0;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: 40rpx;
+  letter-spacing: 1px;
+  font-family: "Microsoft Yahei";
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  vertical-align: middle;
+  background-color: #e5e5e5;
+}
+
+.eco-content {
+  font-size: 30rpx;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-family: "Microsoft Yahei";
+  color: #666;
+  margin: 50rpx 10rpx 40rpx 10rpx;
+}
+
+.last-change-time {
+  text-align: end;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  color: #666;
+  font-size: 24rpx;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-family: "Microsoft Yahei";
+}
+
+.read {
+  float: left;
+}
+
+.edit {
+  float: right;
+}
+
+.active {
+  margin-right: 40rpx;
+  height: 110rpx;
+  line-height: 110rpx;
+  font-size: 40rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.appreciate {
+  height: 100%;
+  line-height: 100%;
+  padding: 20rpx 20rpx 10rpx 40rpx;
+}
+
+.avatarList {
+  height: 100%;
+  line-height: 100%;
+  width: 490rpx;
+  overflow: hidden;
+}
+
+.likeAvatar {
+  width: 64rpx;
+  height: 64rpx;
+  margin: 20rpx 0 10rpx 18rpx;
+  border-radius: 50%;
+  box-shadow: 5rpx 10rpx 20rpx #ccc;
+
+}
+
+.avat-more {
+  width: 64rpx;
+  height: 64rpx;
+  padding: 5rpx;
+  text-align: center;
+  line-height: 64rpx;
+  border-radius: 50%;
+  font-size: 22rpx;
+  background-color: #ddd;
+}
+
+.likeNum {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.m-20 {
+  margin-left: 20rpx;
+}
+
+/* 机构介绍 */
+.org {
+  display: flex;
+  position: relative;
+}
+
+.padding-20 {
+  padding: 20rpx;
+}
+
+.info {
+  width: 400rpx;
+  margin: 0 0 0 20rpx;
+  font-size: 26rpx;
+  font-family: "Microsoft Yahei";
+}
+
+.eco-orgHeadImg {
+  border: 2rpx solid #ccc;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.eco-orgName {
+  font-weight: bold;
+  font-size: 30rpx;
+  letter-spacing: 1px;
+}
+
+.eco-address {
+  color: #ccc;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  font-weight: 500;
+  letter-spacing: 2px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.m-b-10 {
+  margin-bottom: 4rpx;
+}
+
+.collect {
+  padding: 10rpx;
+  border: 2rpx solid #aaa;
+  /* background-color:yellow; */
+  border-radius: 50%;
+  position: absolute;
+  right: 40rpx;
+  top: 45rpx;
+  color: #000;
+  font-size: 40rpx !important;
+}
+
+.follow {
+  font-size: 80rpx !important;
+  margin-left: 60rpx;
+}
+
+
+/* 底部导航 */
+.tabbar {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  height: 80rpx;
+  background-color: #fff;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 -4rpx 4rpx #ddd;
+  font-size: 47rpx;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+/* 讨论 */
+.comment {
+  padding: 30rpx 30rpx;
+}
+
+.commentTitle {
+  font-size: 40rpx;
+  font-weight: 800;
+}
+
+.commentNum {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.commentChunk {
+  display: flex;
+  align-items: center;
+  margin-top: 25rpx;
+}
+
+.inputComment {
+  margin-left: 26rpx;
+  opacity: 0.8;
+  background-color: #ddd;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 30rpx;
+  width: calc(100% - 80rpx - 26rpx - 20rpx);
+  border-radius: 50rpx;
+}
+
+.commentList {
+  margin-top: 20rpx;
+}
+
+.listShow {
+  margin: 50rpx 0;
+  display: flex;
+}
+
+.info {
+  width: calc(100% - 80rpx - 26rpx - 20rpx);
+  margin-left: 26rpx;
+  font-weight: 500;
+  position: relative;
+}
+
+.info-comment {
+  width: calc(100% - 80rpx - 26rpx - 20rpx);
+  margin-left: 26rpx;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-name {
+  line-height: 50rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: "Microsoft Yahei";
+  color: #666;
+}
+
+.info-time {
+  font-weight: 200;
+  /* letter-spacing: 2px; */
+  font-family: "Microsoft Yahei";
+  color: #666;
+  font-size: 20rpx;
+}
+
+.info-call {
+  position: absolute;
+  right: 0;
+  top: 14rpx;
+  font-size: 38rpx !important;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-family: "Microsoft Yahei";
+  color: #666;
+}
+
+.appNum {
+  font-size: 28rpx;
+}
+
+.info-content {
+  margin-top: 25rpx;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-family: "Microsoft Yahei";
+  color: #666;
+}
+
+.avatar-comment {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  box-shadow: 10rpx 10rpx 30rpx #ccc;
+}

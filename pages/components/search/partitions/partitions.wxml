@@ -1,0 +1,31 @@
+<!-- 轮播图 -->
+<swiper class="screen-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="3000" duration="500">
+	<swiper-item wx:for="{{swiper}}" wx:key="index">
+		<image src="{{item.img}}" mode='aspectFill'></image>
+	</swiper-item>
+</swiper>
+<view class="VerticalBox">
+	<!-- 左边导航 -->
+	<scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 520rpx)">
+		<view class="p-item cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key="index" bindtap='tabSelect' data-id="{{index}}">
+			<text class="text-item">{{item.name}}</text>
+		</view>
+	</scroll-view>
+	<!-- 右边内容 -->
+	<scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 520rpx)" scroll-into-view="main-{{MainCur}}" scroll-top="{{goTop}}">
+		<view class="padding-top padding-lr" wx:for="{{list}}" wx:key="index" id="main-{{index}}">
+			<view class='bg-white'>
+				<text class='cuIcon-title text-green first-floor'>{{item.name}}</text>
+				<view class="second-floor">
+					<view class="item" wx:for="{{item.list}}" wx:key="index" wx:for-item="twoItem" data-typeid="{{twoItem.id}}" data-typename="{{twoItem.name}}" bindtap="chooseType">
+						<text>{{twoItem.name}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+	<!-- 回到顶部，内容有wxml的html、wcss的css、js中的goTop数据和事件 -->
+	<view class="goTop" bindtap="goTop">
+		<text class="cuIcon-top text-white"></text>
+	</view>
+</view>

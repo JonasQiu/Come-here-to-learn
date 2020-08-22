@@ -1,0 +1,117 @@
+@import "/colorui/main.wxss";
+@import "/colorui/icon.wxss";
+
+.nav .cu-item {
+  padding: 0;
+}
+
+.padding-lr {
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+}
+
+.padding-top {
+  padding-top: 24rpx;
+}
+
+/* pages/component/nav/nav.wxss */
+.VerticalNav.nav {
+  width: 200rpx;
+  white-space: initial;
+}
+
+.screen-swiper {
+  min-height: 0;
+}
+
+
+.VerticalNav.nav .cu-item {
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  margin: 0;
+  border: none;
+  height: 50px;
+  position: relative;
+}
+
+.VerticalNav.nav .cu-item.cur {
+  background-color: #f1f1f1;
+}
+
+.VerticalNav.nav .cu-item.cur::after {
+  content: "";
+  width: 8rpx;
+  height: 30rpx;
+  border-radius: 10rpx 0 0 10rpx;
+  position: absolute;
+  background-color: currentColor;
+  top: 0;
+  right: 0rpx;
+  bottom: 0;
+  margin: auto;
+}
+
+.VerticalBox {
+  display: flex;
+  margin-bottom: 110rpx;
+}
+
+.VerticalMain {
+  background-color: #f1f1f1;
+}
+
+.VerticalNav.nav .p-item {
+  width: 175rpx;
+}
+
+.VerticalNav .cu-bar {
+  flex-wrap: wrap;
+}
+
+.bg-white {
+  font-size: 34rpx;
+  padding-bottom: 34rpx;
+}
+
+.first-floor {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+}
+
+.second-floor {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 25rpx;
+}
+
+.item {
+  padding: 13rpx 20rpx;
+  border: 2rpx solid #ccc;
+  margin-left: 20rpx;
+  margin-top: 15rpx;
+  border-radius: 35rpx;
+  vertical-align: middle;
+}
+
+/* 回到顶部 */
+.goTop {
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 150rpx;
+  right: 10rpx;
+  background-color: rgb(74, 240, 101);
+  box-shadow: 0rpx 0rpx 20rpx #fff;
+  font-size: 50rpx;
+  opacity: 0.6;
+}
+
+.goTop:hover {
+  opacity: 1;
+}

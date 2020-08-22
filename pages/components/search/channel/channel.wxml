@@ -1,0 +1,70 @@
+<!-- 搜索 -->
+<view class="cu-bar search bg-white">
+	<view class="search-form round">
+		<text class="cuIcon-search"></text>
+		<input type="text" placeholder="请搜索机构名称关键字" confirm-type="search" bindinput="getValue" value="{{searchValue}}"></input>
+	</view>
+	<view class="action">
+		<button class="cu-btn bg-green shadow-blur round" bindtap="search">搜索</button>
+	</view>
+</view>
+
+<!-- 展示没有搜索内容时的界面 -->
+<view wx:if="{{showList.length == 0}}">
+	<view class="noContent">
+		<!-- 热搜 -->
+		<view class="hot bg-white">
+			<text class="search-title">热搜</text>
+			<view class="hotContent">
+				<!-- url="/pages/components/search/channel/haveContent/haveContent?query={{item}}" -->
+				<view wx:for="{{hotList}}" wx:key="index" class="hotItem" bindtap="addInfo" data-value="{{item}}">
+					<text class="{{index<4? '':'color999'}}">{{index+1}}</text>
+					<text class="margin-15">{{item}}</text>
+					<text class="{{index<2?'hotText':index<6?'newText':''}}"></text>
+				</view>
+			</view>
+		</view>
+		<!-- 搜索历史 -->
+		<view class="history bg-white" wx:if="{{historyList.length > 0}}">
+			<text class="search-title">搜索历史</text>
+			<view class="padding-top">
+				<view bindtap="addInfo" data-value="{{item}}" wx:for="{{historyList}}" class="historyContent" wx:key="index">
+					<text class="historyItem">{{item}}</text>
+				</view>
+			</view>
+
+		</view>
+		<!-- 清除搜索历史 -->
+		<view class="clearHistory" bindtap="clearHistory" wx:if="{{historyList.length > 0}}">
+			<text class="cuIcon-deletefill"></text> 清除搜索历史
+		</view>
+	</view>
+</view>
+<!-- 展示有搜索内容时的界面 -->
+<view wx:else list="haveContentList" class="b-color">
+	<!-- 导航栏nav -->
+	<scroll-view scroll-x class="bg-white nav">
+		<view class="flex text-center">
+			<view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{typeList}}" wx:key="index" bindtap="tabSelect" data-id="{{index}}">
+				{{item}}
+			</view>
+		</view>
+	</scroll-view>
+
+	<view class="content">
+		<view class="item {{toggleDelay?'animation-slide-bottom':''}}" bindtap="orgDetail" data-name="{{item._id}}" wx:for="{{showList}}" wx:key="index" style="animation-delay: {{(index+1)*0.2}}s;">
+			<image src='{{item.img.logo}}' class="item-img"></image>
+			<view class="info">
+				<view class="info-content">
+					{{item.info.orgName}}
+				</view>
+				<view class="msg">
+					<view class="userName">{{item.description}}</view>
+					<text wx:for="{{item.showStar}}" wx:key="index" class="cuIcon-favorfill text-yellow"></text><text wx:for="{{5-item.showStar}}" wx:key="index" class="cuIcon-favor"></text>
+					<text> {{item.star}} 分</text>
+					<view style="margin-top: 5rpx;">距离 {{item.distance}} km</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

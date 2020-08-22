@@ -1,0 +1,112 @@
+page {
+  padding-top: 100rpx;
+}
+
+.indexes {
+  position: relative;
+}
+
+.indexBar {
+  padding: 10rpx 0;
+  position: fixed;
+  right: 10rpx;
+  bottom: 5px;
+  width: 50rpx;
+  text-align: center;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+  border-radius: 10rpx;
+  justify-content: space-between;
+}
+
+.indexBar-item {
+  /* height: 42rpx; */
+  font-size: 24rpx;
+  color: #888;
+  z-index: 9;
+  position: relative;
+}
+
+movable-view.indexBar-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 10rpx;
+  height: 20rpx;
+  width: 4rpx;
+  background-color: #f37b1d;
+}
+
+.indexToast {
+  position: fixed;
+  top: 0;
+  right: 80rpx;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  margin: auto;
+  color: #fff;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 48rpx;
+}
+
+/* 城市样式 */
+.padding {
+  padding: 15rpx 30rpx;
+}
+
+/* 当前城市 */
+.curCity {
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  padding-left: 20rpx;
+  border-bottom: 2rpx solid #ccc;
+  color: #666;
+  font-size: 30rpx;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "Microsoft Yahei";
+}
+
+/* 热搜城市 */
+.hotCity {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding-bottom: 20rpx;
+}
+
+.hotCityItem {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  padding: 10rpx 15rpx;
+  border: 2rpx solid #ccc;
+  border-radius: 40rpx;
+  color: #666;
+  font-size: 27rpx;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "Microsoft Yahei";
+}
+
+/* 全部城市 */
+.cityContent {
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  padding-left: 30rpx;
+  border-bottom: 2rpx solid #ccc;
+  color: #666;
+  font-size: 27rpx;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "Microsoft Yahei";
+}
