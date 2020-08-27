@@ -7,15 +7,15 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
 		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
 		"coverView": true,
+		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
-		"enhance": true,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
@@ -142,6 +142,13 @@
 				{
 					"id": -1,
 					"name": "vr",
+					"pathName": "pages/components/orgDetail/vrShow/vrShow",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/components/orgDetail/vrShow/vrShow",
 					"pathName": "pages/components/orgDetail/vrShow/vrShow",
 					"scene": null
 				}

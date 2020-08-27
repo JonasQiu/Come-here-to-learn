@@ -1,9 +1,0 @@
-<!-- <a-scene background="color: #ECECEC">
-	<a-assets>
-		<a-asset-item id="carModel" src="./static/model/scene.gltf"></a-asset-item>
-	</a-assets>
-	<a-entity gltf-model="#carModel" position="30 -13 30" rotation="0 90 0"></a-entity>
-	<a-camera>
-		<a-cursor></a-cursor>
-	</a-camera>
-</a-scene> -->

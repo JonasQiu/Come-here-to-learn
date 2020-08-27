@@ -6,7 +6,6 @@ const comUTU = require('../../../utils/User/UserToUser')
 const comLocation = require('../../../utils/Func/location')
 const comEco = require('../../../utils/Ecosystem/getPage')
 
-
 Page({
 
   /**
