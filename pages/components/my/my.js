@@ -1,5 +1,5 @@
 // components/my/my.js
-const commonLogin = require("../../../utils/User/Login")
+const Login = require("../../../utils/User/Login")
 const comCimg = require("../../../utils/Func/loadCimg")
 const comFunBox = require('../../../utils/Func/FunBox')
 
@@ -87,35 +87,48 @@ Component({
     //获取用户信息，进行登录处理
     onGetUserInfo(e) {
       let that = this;
-      if (that.data.userInfo) {
-        wx.showToast({
-          title: '您已经登录过啦',
-        })
-        return
-      }
-      wx.showLoading({
-        title: '正在登录中…请稍后…',
+      wx.getUserProfile({
+        desc: '用于完善用户信息',
+        success(res) {
+          if (that.data.userInfo) {
+            wx.showToast({
+              title: '您已经登录过啦',
+            })
+            return
+          }
+          wx.showLoading({
+            title: '正在登录中…请稍后…',
+          })
+          if (res.userInfo) {
+            //登陆
+            Login.Login(res.userInfo).then(res => {
+              that.setData({
+                userInfo: res,
+              })
+              wx.setStorage({
+                key: 'userInfo',
+                data: res
+              })
+              wx.redirectTo({
+                url: '/pages/index/index',
+              })
+              wx.hideLoading();
+              that.numDH(0)
+            })
+            wx.hideLoading();
+          } else {
+            wx.hideLoading();
+            wx.showModal({
+              title: "登录失败，请重新点击登录",
+              content: "用户拒绝或取消授权登录",
+              showCancel: false
+            })
+          }
+        },
+        fail(res) {
+          console.log(res);
+        }
       })
-      if (e.detail.userInfo) {
-        commonLogin.Login(e.detail.userInfo).then(res => {
-          that.setData({
-            userInfo: res,
-          })
-          wx.redirectTo({
-            url: '/pages/index/index',
-          })
-          wx.hideLoading();
-          that.numDH(0)
-        })
-      } else {
-        wx.hideLoading();
-        wx.showModal({
-          title: "登录失败，请重新点击登录",
-          content: "用户拒绝或取消授权登录",
-          showCancel: false
-        })
-      }
-
     },
     fun_box(e) {
       let that = this;
@@ -179,8 +192,6 @@ Component({
           title: '刷新失败',
         })
       })
-
-
     },
     changePage() {
       this.setData({

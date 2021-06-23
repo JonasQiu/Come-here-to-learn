@@ -1,158 +1,162 @@
 {
-	"cloudfunctionRoot": "cloudfunctions/",
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": false,
-		"es6": true,
-		"enhance": true,
-		"postcss": true,
-		"preloadBackgroundData": false,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		},
-		"useCompilerModule": true,
-		"userConfirmedUseCompilerModuleSwitch": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.4.2",
-	"appid": "wx275b77d11052ac20",
-	"projectname": "1-education",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": -1,
-			"list": [
-				{
-					"id": -1,
-					"name": "搜索",
-					"pathName": "pages/components/search/search",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/components/search/channel/haveContent/haveContent",
-					"pathName": "pages/components/search/channel/haveContent/haveContent",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 2,
-					"name": "机构详情页",
-					"pathName": "pages/components/orgDetail/orgDetail",
-					"query": "query=uoG9ix67Jx21JFhycJ0qmIeK6DCzrg3pkxQzm87voBfKdC3y",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "老师详情页",
-					"pathName": "pages/components/orgDetail/teacher/teacher",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "生态圈",
-					"pathName": "pages/components/ecosystem/ecosystem",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 5,
-					"name": "生态圈详情页",
-					"pathName": "pages/components/ecoDetail/ecoDetail",
-					"query": "ecoId=gAxZc41UjAdVRFK6aMAcuIjCtvp9G3kQBpnUqzQgNwvXqZWn",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "分类",
-					"pathName": "pages/components/search/partitions/partitions",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/components/search/search",
-					"pathName": "pages/components/search/search",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 8,
-					"name": "用户信息",
-					"pathName": "pages/components/userDetail/userDetail",
-					"query": "userId=54bac78c5ecd3a23005318b4110c12b3",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "加载页面",
-					"pathName": "pages/components/pageLoad/pageLoad",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": 10,
-					"name": "提示页",
-					"pathName": "pages/components/PageToast/PageToast",
-					"query": "title=标题&content=这里是内容",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "vr",
-					"pathName": "pages/components/orgDetail/vrShow/vrShow",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/components/orgDetail/vrShow/vrShow",
-					"pathName": "pages/components/orgDetail/vrShow/vrShow",
-					"scene": null
-				}
-			]
-		}
-	}
+  "cloudfunctionRoot": "cloudfunctions/",
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "useMultiFrameRuntime": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "useApiHook": true,
+    "useApiHostProcess": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.16.1",
+  "appid": "wx275b77d11052ac20",
+  "projectname": "1-education",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "搜索",
+          "pathName": "pages/components/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/components/search/channel/haveContent/haveContent",
+          "pathName": "pages/components/search/channel/haveContent/haveContent",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "机构详情页",
+          "pathName": "pages/components/orgDetail/orgDetail",
+          "query": "query=uoG9ix67Jx21JFhycJ0qmIeK6DCzrg3pkxQzm87voBfKdC3y",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "老师详情页",
+          "pathName": "pages/components/orgDetail/teacher/teacher",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "生态圈",
+          "pathName": "pages/components/ecosystem/ecosystem",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "生态圈详情页",
+          "pathName": "pages/components/ecoDetail/ecoDetail",
+          "query": "ecoId=gAxZc41UjAdVRFK6aMAcuIjCtvp9G3kQBpnUqzQgNwvXqZWn",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "分类",
+          "pathName": "pages/components/search/partitions/partitions",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/components/search/search",
+          "pathName": "pages/components/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 8,
+          "name": "用户信息",
+          "pathName": "pages/components/userDetail/userDetail",
+          "query": "userId=54bac78c5ecd3a23005318b4110c12b3",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "加载页面",
+          "pathName": "pages/components/pageLoad/pageLoad",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 10,
+          "name": "提示页",
+          "pathName": "pages/components/PageToast/PageToast",
+          "query": "title=标题&content=这里是内容",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "vr",
+          "pathName": "pages/components/orgDetail/vrShow/vrShow",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/components/orgDetail/vrShow/vrShow",
+          "pathName": "pages/components/orgDetail/vrShow/vrShow",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

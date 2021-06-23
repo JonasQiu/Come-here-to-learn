@@ -41,7 +41,7 @@ App({
     if (userInfo) {
       this.globalData.goeasy = new GoEasy({
         host: 'hangzhou.goeasy.io',
-        appkey: "BC-fb5b04c9edb24642a6301a7dcac90bc3",
+        appkey: "BC-dc03b5a1ed474d9b913054670631e26b",
         onConnected: function () {
           that.globalData.isOnline = true
           console.log("连接成功");

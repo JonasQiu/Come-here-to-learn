@@ -100,6 +100,7 @@ Page({
         msgType: 0,
         time: Date.now(),
       })
+      // 发送信息的util函数
       comAsk.sendMessages(that.data.roomObj.userId, msg, function () {
         wx.showToast({
           title: '发送成功',
@@ -165,6 +166,7 @@ Page({
               msgType: 1,
               time: Date.now(),
             })
+            // 发送信息的util函数
             comAsk.sendMessages(that.data.roomObj.userId, msg, function () {
               wx.showToast({
                 title: '发送成功',
@@ -211,7 +213,8 @@ Page({
     })
     if (that.data.roomObj) {
       // 如果之前连过，先断开之前的
-      if (!comAsk.unsubscribe(that.data.roomObj.userId)) {
+
+      if (!comAsk.unsubscribe(that.data.roomObj.userId)) { //聊天解除订阅
         wx.hideLoading()
         wx.showToast({
           title: '连接失败，断开上一个连接失败！',
@@ -219,6 +222,7 @@ Page({
         return
       }
     }
+    // 聊天订阅
     comAsk.subscribeMessage(roominfo.userId, that.receiveMessages, function () {
       wx.setStorageSync('curChat', roominfo)
       wx.hideLoading()
@@ -260,6 +264,8 @@ Page({
       msgType: 0,
       time: Date.now(),
     })
+
+    // 发送信息util
     comAsk.sendMessages(that.data.roomObj.userId, msg, function () {
       wx.showToast({
         title: '发送成功',

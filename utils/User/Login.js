@@ -8,8 +8,6 @@ function Login(userInfo) {
                                 userInfo: userInfo
                         }
                 }).then(res => {
-                        wx.setStorageSync('userInfo', res.result.userInfo)
-                        app.onLaunch()
                         resolve(res.result.userInfo)
                 }).catch(res => {
                         reject(res)
